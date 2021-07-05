@@ -59,15 +59,15 @@
 
 
             $name = $this->fr->validation($data['name']);
-            $phone = $this->fr->validation($data['phone']);
             $email = $this->fr->validation($data['email']);
+            $phone = $this->fr->validation($data['phone']);
             $password = $this->fr->validation(md5($data['password']));
             $verify_token = md5(rand());
 
             $check_email_query = "SELECT * FROM tbl_user WHERE email='$email' LIMIT 1";
             $check_email = $this->db->select($check_email_query);
 
-            if (isset($check_email) > 0) {
+            if ($check_email > 0) {
                 $error = "This email Id Already Exisit";
                 return $error;
                 header('Location:register.php');
@@ -88,5 +88,3 @@
         }
 
     }
-    
-?>
