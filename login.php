@@ -52,19 +52,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				<div class="card-body">
 
 					<form action="" method="POST">
-					
-							<div class="mb-3">
-								<label for="exampleInputEmail1" class="form-label">Email Address</label>
-								<input type="email" name="email" class="form-control">
-							</div>
 
-							<div class="mb-3">
-								<label for="exampleInputEmail1" class="form-label">Password</label>
-								<input type="text" name="password" class="form-control">
-							</div>
+						<div class="mb-3">
+							<label for="exampleInputEmail1" class="form-label">Email Address</label>
+							<input type="email" name="email" class="form-control">
+						</div>
 
-							<button type="submit" name="login" class="btn btn-primary">Login</button>
-						
+						<div class="mb-3">
+							<label for="exampleInputEmail1" class="form-label">Password</label>
+							<input type="text" name="password" class="form-control">
+						</div>
+
+						<button type="submit" name="login" class="btn btn-primary">Login</button>
+
+						<a class="float-end" href="password-reset.php">Forget Your Password?</a>
 					</form>
 					<hr>
 					<h5>Did not receive your varyfication email? <a href="resend-email.php">Resend</a></h5>
